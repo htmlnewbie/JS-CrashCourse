@@ -1,0 +1,35 @@
+@mixin thirteen-hundred {
+	@media (max-width: 1300px) {
+		@content;
+	}
+}
+
+@mixin eight-ten {
+	@media (max-width: 810px) {
+		@content;
+	}
+}
+
+@mixin half-screen {
+	@media (max-width: 750px) {
+		@content;
+	}
+}
+
+@mixin phone-display {
+	@media (min-width: 600px) {
+		@content;
+	}
+}
+
+@mixin five-hundred {
+	@media (max-width: 500px) {
+		@content;
+	}
+}
+
+@mixin mobile-screen {
+	@media (max-width: 420px) {
+		@content;
+	}
+}

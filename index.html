@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>JS-CrashCourse</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/Images/Favicon/apple-touch-icon.png.png"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/Images/Favicon/android-chrome-512x512.png"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/Images/Favicon/android-chrome-192x192.png"
+		/>
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/Images/Favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/Images/Favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/Images/Favicon/site.webmanifest" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="Styles/CSS/main.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	</head>
+
+	<body>
+		<div class="dimensionsContainer">
+			<h4 class="dimensions"></h4>
+			<button class="closeDemensions">&times;</button>
+		</div>
+
+		<div class="side__menu" id="sidebar">
+			<a href="javascript:void(0)" class="closebtn">&times;</a>
+			<h2 class="side__menu__title">
+				Menu
+			</h2>
+			<button type="button" class="collapsible">
+				Lessons <a class="collapsible__arrow">&#x9b;</a>
+			</button>
+			<div class="collapsible__container">
+				<ol class="collapsible__container__episode__list numbered">
+					<li><a href="">Welcome to Javascript for Beginners</a></li>
+					<li><a href="">7 Javascript Facts</a></li>
+					<li><a href="">Your First Script</a></li>
+					<li><a href="">A Brief History</a></li>
+					<li><a href="">Introduction to Varibales</a></li>
+					<li>
+						<a href="Episodes/Ep3_MergingVariables/HTML/index.html"
+							>Merging Variables</a
+						>
+					</li>
+					<li>
+						<a href="Episodes/Ep4_ConsoleLogging/HTML/index.html"
+							>Console Logging</a
+						>
+					</li>
+					<li>
+						<a href="Episodes/Ep5_SelectingHtmlElements/HTML/index.html"
+							>Selecting HTML Elements</a
+						>
+					</li>
+					<li>
+						<a href="">A way to share code</a>
+					</li>
+					<li>
+						<a href="Episodes/Ep8_AcceptingUserInput/"
+							>JavaScript mini project #1</a
+						>
+					</li>
+					<li>
+						<a href="">String manipulation</a>
+					</li>
+					<li><a href="">Accepting user input</a></li>
+					<li><a href="">Intro to comparison operators</a></li>
+					<li><a href="">Handling opposite operators</a></li>
+					<li><a href="">JavaScript mini project #2</a></li>
+					<li><a href="">Handling special cases</a></li>
+					<li><a href="">Code comments</a></li>
+					<li><a href="">Introduction to arithmetic</a></li>
+					<li><a href="">Boolean logic</a></li>
+					<li><a href="">Making lists with arrays</a></li>
+					<li><a href="">Checking variable types</a></li>
+					<li><a href="">Variable casting</a></li>
+					<li><a href="">More comparison operators</a></li>
+					<li><a href="">JavaScript mini project #3</a></li>
+					<li><a href="">Functions</a></li>
+					<li><a href="">Practice with functions</a></li>
+					<li><a href="">JavaScript mini prject #4</a></li>
+					<li><a href="">Query selectors</a></li>
+					<li><a href="">Introduction to events</a></li>
+					<li><a href="">JavaScript tip calculator project</a></li>
+					<li><a href="">Anonymous functions</a></li>
+					<li><a href="">IIFE</a></li>
+					<li><a href="">The 'this' keyword</a></li>
+					<li><a href="">Scope</a></li>
+					<li><a href="">Hoisting</a></li>
+					<li><a href="">Intro to event listeners</a></li>
+					<li><a href="">Gettings input values</a></li>
+					<li><a href="">Changing CSS with event listeners</a></li>
+					<li><a href="">JavaScript mini project #5</a></li>
+					<li><a href="">Objects</a></li>
+					<li><a href="">For loops</a></li>
+					<li><a href="">While loops</a></li>
+					<li><a href="">For each loops</a></li>
+					<li><a href="">JavaScript guessing game project</a></li>
+					<li><a href="">Let and const</a></li>
+					<li><a href="">Intro to OOP</a></li>
+					<li><a href="">Extending classes</a></li>
+					<li><a href="">JavaScript modal project</a></li>
+					<li><a href="">Home stretch</a></li>
+					<li><a href="">Template literals</a></li>
+					<li><a href="">Object literals</a></li>
+					<li><a href="">Destructuring arrays, objects and the rest</a></li>
+					<li><a href="">Timeouts</a></li>
+					<li><a href="">Intervals</a></li>
+					<li><a href="">APIs and Ajax using Fetch</a></li>
+					<li><a href="">Arrow functions</a></li>
+					<li><a href="">Adding and removing CSS classes</a></li>
+					<li><a href="">JavaScript final project</a></li>
+					<li><a href="">JavaScript for beginners summary</a></li>
+				</ol>
+			</div>
+			<button type="button" class="collapsible">
+				Resources <a class="collapsible__arrow">&#x9b;</a>
+			</button>
+			<div class="collapsible__container">
+				<ul class="collapsible__container__episode__list bulleted">
+					<li>
+						<a
+							href="https://www.google.com/search?q=color+picker&rlz=1C1CHBF_enUS828US828&oq=Color+&aqs=chrome.0.69i59l2j69i65l3j69i60l3.1890j0j9&sourceid=chrome&ie=UTF-8"
+							target="_blank"
+							>Color Picker</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://hookagency.com/website-color-schemes/"
+							target="_blank"
+							>Color Combinations</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<header class="header">
+				<h1 class="header__title">
+					Lets Learn Some Javascript!
+				</h1>
+			</header>
+
+			<nav class="navbar">
+				<div class="navbar__menu">
+					<button class="navbar__menu__button" id="SM_Button">
+						Open Menu
+					</button>
+				</div>
+			</nav>
+
+			<section class="subheader">
+				<h2 class="subheader__title">
+					Lesson 40: Objects
+				</h2>
+			</section>
+
+			<section class="main">
+				<div class="panel">
+					<h3 class="panel__title">Output Panel</h3>
+					<div class="panel__area">
+						<div class="panel__area__box">
+							<h4 class="panel__area__box__title" id="panel1-h4">
+								Panel 1
+							</h4>
+							<p class="panel__area__box__p">
+								Press the button to see who Tuddy belongs to
+							</p>
+
+							<p class="panel__area__box__p-test" id="panel1-p">
+								Output:
+							</p>
+							<button
+								class="main__button"
+								id="button1"
+								onclick="tuddy.getOwner()"
+							>
+								Button 1
+							</button>
+						</div>
+						<div class="panel__area__box">
+							<h4 class="panel__area__box__title" id="panel2-h4">
+								Panel 2
+							</h4>
+							<p class="panel__area__box__p">
+								Click the button to see Tommy's age
+							</p>
+
+							<p class="panel__area__box__p-test" id="panel2-p">
+								Output:
+							</p>
+							<button
+								class="main__button"
+								id="button2"
+								onclick="tommy.getAge()"
+							>
+								Button 2
+							</button>
+						</div>
+						<div class="panel__area__box">
+							<h4 class="panel__area__box__title" id="panel3-h4">
+								Panel 3
+							</h4>
+							<p class="panel__area__box__p">
+								Click the button to see what sound Tuddy makes
+							</p>
+
+							<p class="panel__area__box__p-test" id="panel3-p">
+								Output:
+							</p>
+							<button class="main__button" id="button3" onclick="tuddy.sound()">
+								Button 3
+							</button>
+						</div>
+						<div class="panel__area__box">
+							<h4 class="panel__area__box__title" id="panel4-h4">
+								Panel 4
+							</h4>
+							<p class="panel__area__box__p">
+								Click the button to see Tommy's grandfather
+							</p>
+
+							<p class="panel__area__box__p-test" id="panel4-p">
+								Output:
+							</p>
+
+							<button
+								class="main__button"
+								id="button4"
+								onclick="tommy.getGrand()"
+							>
+								Button 4
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="inputPanel">
+				<div class="panel">
+					<h3 class="panel__title">Input Panel</h3>
+					<div class="panel__area">
+						<div class="panel__area__box">
+							<form class="panel__area__box__form" id="input__form">
+								<textarea
+									class="panel__area__box__form__textarea input__text"
+									form="input__form"
+									placeholder="Enter some text..."
+								></textarea>
+							</form>
+							<button
+								type="button"
+								class="panel__area__box__button input__submit"
+							>
+								Submit
+							</button>
+						</div>
+						<div class="panel__area__box">
+							<div class="panel__area__box__form__div">
+								<span class="panel__area__box__form__div__span"
+									>Your text will go here...</span
+								>
+							</div>
+							<button
+								type="button"
+								class="panel__area__box__button input__reset"
+							>
+								Reset
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="control">
+				<div class="panel">
+					<h3 class="panel__title">
+						Control Panel
+					</h3>
+
+					<div class="panel__area">
+						<div class="panel__area__box">
+							<h4 class="panel__area__text">
+								Perform an alert
+							</h4>
+							<button
+								type="button"
+								class="panel__area__button"
+								id="alert"
+								onclick="tommy.getCats()"
+							>
+								Alert
+							</button>
+						</div>
+
+						<div class="panel__area__box">
+							<h4 class="panel__area__text">
+								Reset output panels
+							</h4>
+
+							<button type="button" class="panel__area__button reset__output">
+								Reset
+							</button>
+						</div>
+
+						<div class="panel__area__box WD-box">
+							<h4 class="panel__area__text">
+								Get window Demensions
+							</h4>
+
+							<button type="button" class="panel__area__button openDimensions">
+								Dimensions
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="footer">
+				<h4 class="footer__title">
+					&copy; Tommy Aaron 2020 | All rights reserved
+				</h4>
+			</footer>
+		</div>
+
+		<script>
+			//Variable
+			var p1p = document.getElementById("panel1-p");
+			var p2p = document.getElementById("panel2-p");
+			var p3p = document.getElementById("panel3-p");
+			var p4p = document.getElementById("panel4-p");
+
+			var paul = {
+				name: "Paul",
+			};
+
+			var tommy = {
+				name: "Tommy", //Property
+				cats: 1,
+				age: 21,
+				grandfather: paul.name,
+				getGrand: function () {
+					if (p4p.innerText == "Output:") {
+						p4p.innerText = this.name + "'s grandfather is " + paul.name;
+					} else {
+						p4p.innerText = "Output:";
+					}
+				},
+				sound: function () {
+					//Method
+					console.log("This person's name is " + this.name);
+				},
+				getCats: function () {
+					alert(this.name + " has " + this.cats + " cat.");
+				},
+				getAge: function () {
+					if (p2p.innerText == "Output:") {
+						p2p.innerText = "Tommy's age is " + this.age;
+					} else {
+						p2p.innerText = "Output:";
+					}
+				},
+			};
+
+			var tuddy = {
+				name: "Tuddy",
+				cats: 0,
+				age: 12,
+				sound: function () {
+					if (p3p.innerText == "Output:") {
+						p3p.innerText = "MEOW!";
+					} else {
+						p3p.innerText = "Output:";
+					}
+				},
+				owner: "Vickie",
+				getOwner: function () {
+					if (p1p.innerText == "Output:") {
+						p1p.innerText = this.name + " is " + tuddy.owner + "'s cat.";
+					} else {
+						p1p.innerText = "Output:";
+					}
+				},
+			};
+		</script>
+
+		<script src="JS/jscode.js"></script>
+	</body>
+</html>

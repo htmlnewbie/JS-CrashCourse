@@ -1,0 +1,450 @@
+@import "./variables";
+@import "./reset";
+@import "./media";
+
+/*================GENERAL RULES================*/
+section {
+	display: grid;
+	grid-template-columns: $full-screen-column;
+	margin: 20px 0;
+
+	@include half-screen {
+		grid-template-columns: $half-screen-column;
+	}
+
+	& > div.panel {
+		border: $js-dark-border-thick-3x;
+		border-top: none;
+		grid-column: $default-column;
+		background-color: $egg-white;
+
+		& > h3 {
+			text-align: center;
+			background-color: $js-dark;
+			color: $js-yellow;
+			padding: 10px 5px;
+		}
+
+		& > .panel__area {
+			display: grid;
+			grid-template-columns: $four-column-template;
+			gap: 15px;
+			background-color: $js-dark;
+
+			& > .panel__area__box {
+				border: $js-yellow-border-medium;
+				padding: 10px;
+				background-color: $egg-white;
+				width: 100%;
+			}
+
+			& > .panel__area__text {
+				text-align: center;
+				font-size: 1.5rem;
+			}
+
+			& > button {
+				display: block;
+				margin: 20px auto;
+				margin-bottom: 0;
+				font-size: 1.3rem;
+			}
+		}
+	}
+}
+
+button {
+	color: $js-yellow;
+	background-color: $js-dark;
+	border: $js-dark-border-medium;
+	outline: none;
+}
+
+button:hover {
+	color: $js-dark;
+	background-color: $js-yellow;
+	border: $js-yellow-border-medium;
+	cursor: pointer;
+}
+
+/*================DIMENSIONS SECTION================*/
+.dimensionsContainer {
+	border: $js-yellow-border-thin;
+	display: none;
+	position: fixed;
+	background-color: $js-dark;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	padding: 5px;
+
+	&:hover {
+		cursor: grab;
+		cursor: -moz-grab;
+		cursor: -webkit-grab;
+	}
+
+	& h4 {
+		text-align: center;
+		color: $js-yellow;
+		margin-right: 25px;
+	}
+
+	& button {
+		position: absolute;
+		top: 0;
+		right: 2px;
+		font-size: 1rem;
+		color: $js-yellow;
+		background: transparent;
+		border: none;
+
+		&:hover {
+			color: $js-yellow-light;
+			background: transparent;
+			border: none;
+		}
+	}
+}
+
+.dimensionsContainer:active {
+	cursor: grabbing;
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+}
+
+/*================HEADER SECTION================*/
+.header {
+	border-bottom: $js-dark-border-thin;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $js-dark;
+
+	&__title {
+		font-size: 3rem;
+		padding: 10px 0;
+		text-align: center;
+		color: $js-yellow;
+		display: inline-block;
+
+		@include mobile-screen {
+			font-size: 2rem;
+		}
+	}
+}
+
+.subheader {
+	margin: 0;
+	grid-template-columns: $one-column-template;
+
+	&__title {
+		justify-self: center;
+		padding: 10px 0px;
+		font-size: 2rem;
+		color: $js-dark;
+	}
+}
+
+/*================NAVBAR SECTION================*/
+.navbar {
+	display: grid;
+	grid-template-columns: $one-column-template;
+	background-color: $js-dark;
+
+	&__title {
+		font-size: 2rem;
+		color: $js-dark;
+		margin-top: 20px;
+		display: block;
+		text-align: center;
+	}
+
+	&__menu {
+		width: 100%;
+		justify-self: center;
+		display: grid;
+
+		&__button {
+			font-weight: 700;
+			font-size: 1.5rem;
+		}
+	}
+}
+
+.main {
+	& > .panel {
+		& > .panel__area {
+			@include eight-ten {
+				grid-template-columns: $two-column-template;
+			}
+
+			@include five-hundred {
+				grid-template-columns: $one-column-template;
+			}
+
+			& > .panel__area__box {
+				position: relative;
+				min-height: 170px;
+
+				& > .panel__area__box__p-test {
+					margin-bottom: 40px;
+				}
+
+				& > .main__button {
+					position: absolute;
+					left: 10px;
+					bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+/*================INPUT PANEL SECTION================*/
+.inputPanel {
+	& > .panel {
+		& > .panel__area {
+			display: grid;
+			justify-items: center;
+			grid-template-columns: $two-column-template;
+
+			@include five-hundred {
+				grid-template-columns: $one-column-template;
+			}
+
+			& > .panel__area__box {
+				& > .panel__area__box__button {
+					display: block;
+					margin: 0 auto;
+					margin-top: 10px;
+				}
+
+				& > .panel__area__box__form {
+					display: block;
+					overflow: auto;
+					min-height: 54px;
+					border: $js-dark-border-thin;
+					& > .panel__area__box__form__textarea {
+						resize: none;
+						display: block;
+						width: 100%;
+						height: 100%;
+						background-color: $off-white;
+						outline: none;
+						border: none;
+						padding-left: 5px;
+					}
+				}
+
+				& > .panel__area__box__form__div {
+					display: block;
+					width: 100%;
+					min-height: 54px;
+					background-color: $off-white;
+					border: $js-dark-border-thin;
+					padding-left: 5px;
+
+					& > .panel__area__box__form__div__span {
+						opacity: 0.6;
+					}
+
+					& > .panel__area__box__form__div__span__active {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*================CONTROL PANEL SECTION================*/
+.control {
+	& > .panel {
+		& > .panel__area {
+			grid-template-columns: $three-column-template;
+
+			@include half-screen {
+				grid-template-columns: $two-column-template;
+			}
+
+			@include five-hundred {
+				grid-template-columns: $one-column-template;
+			}
+
+			& > .panel__area__box {
+				display: grid;
+				justify-items: center;
+
+				& > .panel__area__text {
+					font-size: 1.5rem;
+
+					@include eight-ten {
+						font-size: 0.9rem;
+					}
+
+					@include half-screen {
+						font-size: 1.3rem;
+					}
+				}
+
+				& > .panel__area__button {
+					font-size: 1.25rem;
+					padding: 0 5px;
+					margin-top: 10px;
+
+					@include eight-ten {
+						font-size: 1rem;
+					}
+
+					@include half-screen {
+						font-size: 1.3rem;
+					}
+				}
+
+				& > .openDimensions__active {
+					color: $js-dark;
+					background-color: $js-yellow;
+					border: $js-yellow-border-medium;
+				}
+			}
+
+			& > .WD-box {
+				@include half-screen {
+					grid-column: 1 / -1;
+				}
+			}
+		}
+	}
+}
+
+/*================SIDE MENU SECTION================*/
+.side__menu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: $js-dark;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: height 0.5s;
+	white-space: nowrap;
+	color: $js-yellow;
+	padding-bottom: 20px;
+
+	&__title {
+		text-align: center;
+		font-size: 2rem;
+
+		@include half-screen {
+			font-size: 2.5rem;
+		}
+	}
+
+	& > button {
+		padding: 8px 8px 8px 32px;
+		font-size: 1.5rem;
+		// display: block;
+		background-color: transparent;
+	}
+
+	& > .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 2rem;
+		margin-left: 50px;
+		color: $js-yellow;
+		opacity: 0;
+
+		&:hover {
+			color: $js-yellow-light;
+		}
+	}
+}
+
+/*================COLLAPSIBLE SECTION================*/
+.collapsible {
+	color: $js-yellow;
+	border: none;
+
+	&:hover {
+		color: $js-yellow-light;
+		border: none;
+	}
+}
+
+.collapsible__container {
+	padding: 0px 50px;
+	padding-right: 10px;
+	max-height: 0;
+	transition: max-height linear;
+	overflow: hidden;
+	/*================EPISODE LIST SECTION================*/
+	&__episode__list {
+		font-size: 1.2rem;
+
+		@include half-screen {
+			font-size: 1.2rem;
+			margin-left: 40px;
+		}
+
+		@include mobile-screen {
+			font-size: 1rem;
+			margin-left: 0px;
+		}
+
+		& > li {
+			color: $js-yellow;
+
+			& > a:hover {
+				color: $js-yellow-light;
+			}
+		}
+	}
+}
+
+.numbered > li {
+	list-style-type: decimal;
+}
+
+.bulleted > li {
+	list-style-type: none;
+}
+
+.collapsible__active {
+	color: $js-yellow-light;
+}
+
+.collapsible__arrow {
+	transition: transform 0.3s linear;
+	display: inline-block;
+	font-size: 2rem;
+	margin-left: 5px;
+}
+
+.collapsible__arrow__active {
+	transform: rotate(90deg);
+}
+
+/*================FOOTER SECTION================*/
+.footer {
+	width: 100%;
+	border-top: $basic-border;
+	margin-top: 20px;
+	background-color: $js-dark;
+
+	&__title {
+		text-align: center;
+		color: $js-yellow;
+		padding: 20px 0;
+		font-size: 1.25rem;
+
+		@include mobile-screen {
+			font-size: 0.8rem;
+		}
+	}
+}
